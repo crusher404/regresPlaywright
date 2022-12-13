@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "testMobile": "npx playwright test --config=./playwright.mobile.config.ts",
+    "testDesktop": "npx playwright test --config=./playwright.desktop.config.ts",
+    "testVisual": "npx playwright test --config=./playwright.visual.config.ts",
+    "test": "npm run testDesktop&&npm run testMobile&&npm run testVisual"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crusher404/regresPlaywright.git"
@@ -16,6 +21,11 @@
   },
   "homepage": "https://github.com/crusher404/regresPlaywright#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@playwright/test": "^1.28.1"
+  },
+  "dependencies": {
+    "faker": "^6.6.6",
+    "faker-js": "^1.0.0"
   }
 }
